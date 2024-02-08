@@ -1,0 +1,94 @@
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        flex-direction: row;
+    }
+
+    .logout-container {
+        margin-left: auto;
+    }
+}
+
+.sidebar {
+    width: 35cqmin;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: -ms-device-fixed;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+.user-avatar img {
+    width: 45px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-name {
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.user-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-features li {
+    margin-bottom: 10px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.content-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+}
+
+.logout-button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #f44336; /* Red color for logout button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-dashboard-button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #000000; /* Red color for logout button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-container {
+
+    margin-top: auto;
+    display: flex;
+}
