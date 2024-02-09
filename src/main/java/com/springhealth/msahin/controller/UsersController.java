@@ -15,30 +15,28 @@ import java.util.Optional;
 @RequestMapping("/api/users")
 public class UsersController {
 
-    private final UserRepository userRepository;
     private final UserService userService;
 
-    public UsersController(UserRepository userRepository, UserService userService) {
-        this.userRepository = userRepository;
+    public UsersController(UserService userService) {
         this.userService = userService;
     }
 
     @GetMapping("/{userId}")
     public ResponseEntity<?> userData(@PathVariable Integer userId) {
-        Optional<Users> userOptional = userRepository.findById(userId);
+        Optional<Users> userOptional = userService.findById(userId);
 
         if (userOptional.isPresent()) {
             Users user = userOptional.get();
             return ResponseEntity.ok(user);
         } else {
-            List<Users> usersList = userRepository.findAll();
+            List<Users> usersList = userService.findAll();
             return ResponseEntity.ok(usersList);
         }
     }
 
     @GetMapping("/username/{username}")
     public ResponseEntity<?> getUserByUsername(@PathVariable String username) {
-        Users user = userRepository.findByUsername(username);
+        Users user = userService.findByUsername(username);
         return ResponseEntity.ok(user);
     }
 

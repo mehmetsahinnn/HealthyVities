@@ -11,9 +11,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class UserService {
@@ -26,6 +24,14 @@ public class UserService {
         this.userRepository = userRepository;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
         this.mailSender = mailSender;
+    }
+
+    public Optional<Users> findById(Integer id){
+        return userRepository.findById(id);
+    }
+
+    public List<Users> findAll(){
+        return userRepository.findAll();
     }
 
     public Users findByUsername(String username) {
