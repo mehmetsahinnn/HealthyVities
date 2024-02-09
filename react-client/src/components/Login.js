@@ -69,6 +69,8 @@ function Login() {
 
                 <div className="extra-actions">
                     <Link to="/sign-up" className="register-link">Register</Link>
+                    <br/>
+                    <Link to="/forgot-email" className="register-link">Forgot Password ?</Link>
                 </div>
             </form>
         </div>

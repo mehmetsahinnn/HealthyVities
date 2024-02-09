@@ -11,6 +11,7 @@ import HealthRecordComponent from "./components/HealthRecordComponent";
 import NutritionDiaryComponent from "./components/NutritionDiaryComponent";
 import NutritionDiaryForm from "./components/NutritionDiaryForm";
 import HealthRecordsForm from "./components/HealthRecordsForm";
+import ForgotEmailForm from "./components/ForgotEmailForm";
 
 function App() {
     const [user, setUser] = useState(null);
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/" element={<Login/>}/>
                     <Route path="/sign-up" element={<SignUpComponent/>}/>
                     <Route path="/dashboard" element={<UserDashboard />} />
+                    <Route path="/forgot-email" element={<ForgotEmailForm/>} />
                     <Route path="/admin-dashboard" element={<AdminDashboard/>} />
                     <Route path="/admin-dashboard/activityForm" element={<ActivitiesForm/>} />
                     <Route path="/admin-dashboard/healthRecords" element={<HealthRecordsForm/>} />
